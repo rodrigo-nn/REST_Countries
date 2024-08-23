@@ -1,11 +1,13 @@
+import { useParams } from "react-router-dom";
 const Country = () => {
+  const { countryID } = useParams();
   return (
     <div>
       <div>
         <button>Back</button>
       </div>
       <div>
-        <div>FlagImage</div>
+        <div>FlagImage{countryID}</div>
         <div>
           <div>CountryName</div>
           <div>
