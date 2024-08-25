@@ -1,20 +1,27 @@
-const CountrySmall = () => {
+import { CountrySmallProps } from "../types/CountrySmallProps";
+const CountrySmall: React.FC<CountrySmallProps> = ({
+  flags,
+  name,
+  population,
+  region,
+  capital,
+}) => {
   return (
     <div>
-      <div>FlagImage</div>
+      <img src={flags} alt={name} />
       <div>
-        <h3>CountryName</h3>
+        <h3>{name}</h3>
         <div>
           <h4>Population:</h4>
-          <p>PopulationNumber</p>
+          <p>{population}</p>
         </div>
         <div>
           <h4>Region:</h4>
-          <p>RegionName</p>
+          <p>{region}</p>
         </div>
         <div>
           <h4>Capital:</h4>
-          <p>CapitalName</p>
+          <p>{capital}</p>
         </div>
       </div>
     </div>
