@@ -3,6 +3,7 @@ export type Flags = {
 };
 export type Name = {
   common: string;
+  official: string;
 };
 
 export type Country = {
@@ -16,6 +17,7 @@ export type Country = {
 export type CountrySmallProps = {
   flags: string;
   name: string;
+  officialName: string;
   population: number;
   region: string;
   capital: string[];

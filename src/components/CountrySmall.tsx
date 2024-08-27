@@ -1,13 +1,22 @@
 import { CountrySmallProps } from "../types/CountrySmallProps";
+import { useNavigate } from "react-router-dom";
+
 const CountrySmall: React.FC<CountrySmallProps> = ({
   flags,
   name,
+  officialName,
   population,
   region,
   capital,
 }) => {
+  const navigate = useNavigate();
+
   return (
-    <div>
+    <div
+      onClick={() => {
+        navigate(`/country/${officialName}`);
+      }}
+    >
       <img src={flags} alt={name} />
       <div>
         <h3>{name}</h3>

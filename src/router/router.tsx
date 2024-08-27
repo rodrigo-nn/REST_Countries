@@ -9,7 +9,7 @@ const router = createBrowserRouter([
     element: <Home />,
     children: [
       { path: "/", element: <Countries /> },
-      { path: "/:countryID", element: <Country /> },
+      { path: "/country/:countryID", element: <Country /> },
       { path: "/NotFound", element: <NotFound /> },
       { path: "*", element: <Navigate to="/NotFound" /> },
     ],
